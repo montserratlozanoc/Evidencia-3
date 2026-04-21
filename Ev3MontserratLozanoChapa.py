@@ -5,7 +5,7 @@ class Receta:
         self.__tiempo_preparacion = tiempo_preparacion
         self.__calorias_porcion = calorias_porcion
         self.__num_ingredientes = num_ingredientes
-        
+
     @property
     def nombre(self):
         return self.__nombre
@@ -50,7 +50,7 @@ class Receta:
     def num_ingredientes(self, valor):
         if 1 <= valor <= 50:
             self.__num_ingredientes = valor
-
+    
     def calcular_eficiencia(self):
         return round(self.__num_ingredientes / self.__tiempo_preparacion, 2)
     
@@ -63,9 +63,9 @@ class Receta:
             return "Moderada"
         else:
             return "Alta en calorias"
-        
+    
     def info(self):
-
+        print("=" * 50)
         print(f"Receta:              {self.__nombre}")
         print(f"Dificultad:          {self.__dificultad}")
         print(f"Tiempo:              {self.__tiempo_preparacion} minutos")
@@ -73,7 +73,9 @@ class Receta:
         print(f"Salud:               {self.obtener_categoria_salud()}")
         print(f"Ingredientes:        {self.__num_ingredientes}")
         print(f"Eficiencia:          {self.calcular_eficiencia()} ing/min")
+        print("=" * 50)
 
+# Prueba
 receta = Receta("Ensalada Cesar", "Facil", 15, 350, 8)
 print(receta.calcular_eficiencia())
 print(receta.obtener_categoria_salud())
