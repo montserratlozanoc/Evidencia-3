@@ -53,3 +53,13 @@ class Receta:
 
     def calcular_eficiencia(self):
         return round(self.__num_ingredientes / self.__tiempo_preparacion, 2)
+    
+    def obtener_categoria_salud(self):
+        if self.__calorias_porcion < 300:
+            return "Muy saludable"
+        elif self.__calorias_porcion < 500:
+            return "Saludable"
+        elif self.__calorias_porcion < 800:
+            return "Moderada"
+        else:
+            return "Alta en calorias"
