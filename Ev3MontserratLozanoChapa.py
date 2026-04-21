@@ -77,3 +77,4 @@ class Receta:
 receta = Receta("Ensalada Cesar", "Facil", 15, 350, 8)
 print(receta.calcular_eficiencia())
 print(receta.obtener_categoria_salud())
+receta.info()
