@@ -63,3 +63,13 @@ class Receta:
             return "Moderada"
         else:
             return "Alta en calorias"
+        
+    def info(self):
+
+        print(f"Receta:              {self.__nombre}")
+        print(f"Dificultad:          {self.__dificultad}")
+        print(f"Tiempo:              {self.__tiempo_preparacion} minutos")
+        print(f"Calorias:            {self.__calorias_porcion} kcal")
+        print(f"Salud:               {self.obtener_categoria_salud()}")
+        print(f"Ingredientes:        {self.__num_ingredientes}")
+        print(f"Eficiencia:          {self.calcular_eficiencia()} ing/min")
