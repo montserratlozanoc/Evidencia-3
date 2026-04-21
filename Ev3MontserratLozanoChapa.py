@@ -50,3 +50,6 @@ class Receta:
     def num_ingredientes(self, valor):
         if 1 <= valor <= 50:
             self.__num_ingredientes = valor
+
+    def calcular_eficiencia(self):
+        return round(self.__num_ingredientes / self.__tiempo_preparacion, 2)
