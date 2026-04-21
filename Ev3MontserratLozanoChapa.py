@@ -73,3 +73,7 @@ class Receta:
         print(f"Salud:               {self.obtener_categoria_salud()}")
         print(f"Ingredientes:        {self.__num_ingredientes}")
         print(f"Eficiencia:          {self.calcular_eficiencia()} ing/min")
+
+receta = Receta("Ensalada Cesar", "Facil", 15, 350, 8)
+print(receta.calcular_eficiencia())
+print(receta.obtener_categoria_salud())
